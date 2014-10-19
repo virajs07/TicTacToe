@@ -647,9 +647,10 @@ var TicTacToeView=Backbone.View.extend({
 			}
 		} 
 	},
-	markPlayerOrComputer:function(e){
-		var x=e.pageX;
-		var y=e.pageY;
+	markPlayerOrComputer:function(evt){
+		var rect = canvas.getBoundingClientRect();
+		var x=evt.clientX-rect.left;
+		var y=evt.clientY-rect.top;
 		this.calculateBoxNumberToDraw(x,y);
 	},
 	showAlertToWaitForComputer:function(){
