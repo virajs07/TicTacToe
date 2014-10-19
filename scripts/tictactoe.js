@@ -405,7 +405,7 @@ var TicTacToeView=Backbone.View.extend({
 		var indexOfElementToBeRemoved=0;
 
 		//Box 1 is selected
-		if (x>=8&&x<104&&y>=8&&y<108) {
+		if (x<96&&y<100) {
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(1);
 				if (indexOfElementToBeRemoved>-1){
@@ -432,7 +432,7 @@ var TicTacToeView=Backbone.View.extend({
 		}
 
 		//Box 2 is selected
-		if (x>=104&&x<208&&y>=8&&y<108){
+		if (x>=96&&x<200&&y<100){
 			if (this.turn==1) {
 			indexOfElementToBeRemoved=this.left.indexOf(2);
 				if (indexOfElementToBeRemoved>-1){
@@ -459,7 +459,7 @@ var TicTacToeView=Backbone.View.extend({
 		} 
 
 		//Box 3 is selected
-		if(x>=208&&x<312&&y>=8&&y<108){
+		if(x>=200&&x<300&&y<100){
 			if (this.turn==1) {
 					indexOfElementToBeRemoved=this.left.indexOf(3);
 					if (indexOfElementToBeRemoved>-1){
@@ -486,7 +486,7 @@ var TicTacToeView=Backbone.View.extend({
 		}
 
 		//Box 4 is selected
-		if (x>=8&&x<104&&y>=108&&y<208){
+		if (x<96&&y>=100&&y<200){
 				if (this.turn==1) {
 					indexOfElementToBeRemoved=this.left.indexOf(4);
 					if (indexOfElementToBeRemoved>-1){
@@ -513,7 +513,7 @@ var TicTacToeView=Backbone.View.extend({
 		} 
 
 		//Box 5 is selected
-		if (x>=104&&x<208&&y>=108&&y<208){
+		if (x>=96&&x<200&&y>=100&&y<200){
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(5);
 					if (indexOfElementToBeRemoved>-1){
@@ -540,7 +540,7 @@ var TicTacToeView=Backbone.View.extend({
 		}
 
 		// Box 6 is selected
-		if (x>=208&&x<312&&y>=108&&y<208){
+		if (x>=200&&x<300&&y>=100&&y<200){
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(6);
 					if (indexOfElementToBeRemoved>-1){
@@ -567,7 +567,7 @@ var TicTacToeView=Backbone.View.extend({
 		}
 
 		//Box 7 is selected
-		if (x>=8&&x<104&&y>=208&&y<310){
+		if (x<96&&y>=200&&y<301){
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(7);
 					if (indexOfElementToBeRemoved>-1){
@@ -594,7 +594,7 @@ var TicTacToeView=Backbone.View.extend({
 		} 
 
 		// Box 8 is selected
-		if (x>=104&&x<208&&y>=208&&y<310){
+		if (x>=96&&x<200&&y>=200&&y<300){
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(8);
 					if (indexOfElementToBeRemoved>-1){
@@ -621,7 +621,7 @@ var TicTacToeView=Backbone.View.extend({
 		} 
 
 		//Box 9 is selected
-		if (x>=208&&x<312&&y>=208&&y<310){
+		if (x>=200&&x<303&&y>=200&&y<301){
 			if (this.turn==1) {
 				indexOfElementToBeRemoved=this.left.indexOf(9);
 					if (indexOfElementToBeRemoved>-1){
@@ -657,14 +657,14 @@ var TicTacToeView=Backbone.View.extend({
 		alert("Please wait as it is not your turn!!!");
 	},
 	showAlertForAlreadyPlayedThere:function(){
-		alert("Haha!! You can't trick me!!! Or are you blind!!!");
+		alert("Haha!! You can't trick me Sir. That position has already been played on");
 	},
 	showAlertThatGameEndsInDraw:function(){
 		alert("Well played Sir.. But you still couldn't beat me!!!!");
 		location.reload(true);
 	},
 	showAlertThatComputerHasWon:function(){
-		alert("I told ya I would whup your ass!!!");
+		alert("I am invincible!!");
 		location.reload(true);
 	},
 	showAlertThatPlayerHasWon:function(){
